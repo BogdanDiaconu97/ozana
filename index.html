@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Ozana, house of games!" />
+    <base href="/" />
+    <script>
+      // HACK(keanulee): The Redux package assumes `process` exists - mock it here before
+      // the module is loaded.
+      window.process = {
+        env: {
+          NODE_ENV: 'production',
+        },
+      };
+    </script>
+    <script type="module" src="./src/ozana-app.js"></script>
+    <title>Ozana</title>
+  </head>
+  <body>
+    <ozana-app></ozana-app>
+  </body>
+</html>
