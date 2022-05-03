@@ -2,7 +2,7 @@ import { LitElement } from 'lit-element';
 import { connect } from 'pwa-helpers';
 import store from '../redux/store';
 import { translations } from '../config/translations';
-export class PageMixin extends connect(store)(LitElement) {
+export class PageClass extends connect(store)(LitElement) {
   static get properties() {
     return {
       name: { type: String },

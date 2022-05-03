@@ -1,10 +1,10 @@
 import { html, css, LitElement } from 'lit-element';
 import { containerStyle } from '../config/theme';
-import { PageMixin } from '../helpers/page-mixin';
+import { PageClass } from '../helpers/page-class';
 import { setEmail } from '../redux/user/actions';
 import { selectEmail } from '../redux/user/selectors';
 
-export class LoginPage extends PageMixin {
+export class LoginPage extends PageClass {
   constructor() {
     super();
   }
