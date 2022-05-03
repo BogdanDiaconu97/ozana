@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { containerStyle } from '../config/theme';
+import { containerStyle, titleFont } from '../config/theme';
 import { logo } from '../assets/logo';
 export class OzanaHeader extends LitElement {
   static get properties() {
@@ -13,10 +13,6 @@ export class OzanaHeader extends LitElement {
     return [
       containerStyle,
       css`
-        .logo {
-          display: flex;
-          justify-content: center;
-        }
         nav {
           margin-top: -16px;
           display: flex;
@@ -38,8 +34,7 @@ export class OzanaHeader extends LitElement {
           padding: 12px;
           text-align: center;
           margin: 0;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          font-size: 22px;
+          ${titleFont('22px')};
         }
         a {
           text-decoration: none;

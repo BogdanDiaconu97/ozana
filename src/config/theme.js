@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css, unsafeCSS } from 'lit-element';
 
 export const containerStyle = css`
   .container {
@@ -29,4 +29,9 @@ export const componentStyle = css`
     --lightblue: #2092d4;
     --blue: #2b25d9;
   }
+`;
+
+export const titleFont = px => css`
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: ${unsafeCSS(px)};
 `;
